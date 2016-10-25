@@ -20,3 +20,26 @@ Using the official runtime (this fails on purpose):
 Using the official runtime (this fails on purpose):
 
 `./run-snapshot.sh`
+
+## Output of `./run-4.5.sh`
+
+    error(3):  cannot find tokens file ../output-4.5/org/test/xml/XMLLexer.tokens given for XMLParser
+    warning(125): XMLParser.g4:40:16: implicit definition of token XMLDeclOpen in parser
+    warning(125): XMLParser.g4:40:39: implicit definition of token SPECIAL_CLOSE in parser
+    warning(125): XMLParser.g4:43:40: implicit definition of token CDATA in parser
+    warning(125): XMLParser.g4:43:48: implicit definition of token PI in parser
+    warning(125): XMLParser.g4:43:53: implicit definition of token COMMENT in parser
+    warning(125): XMLParser.g4:45:20: implicit definition of token Name in parser
+    warning(125): XMLParser.g4:49:16: implicit definition of token EntityRef in parser
+    warning(125): XMLParser.g4:49:28: implicit definition of token CharRef in parser
+    warning(125): XMLParser.g4:51:25: implicit definition of token STRING in parser
+    warning(125): XMLParser.g4:56:16: implicit definition of token TEXT in parser
+    warning(125): XMLParser.g4:56:23: implicit definition of token SEA_WS in parser
+    error(126): XMLParser.g4:45:16: cannot create implicit token for string literal in non-combined grammar: '<'
+    error(126): XMLParser.g4:45:36: cannot create implicit token for string literal in non-combined grammar: '>'
+    error(126): XMLParser.g4:45:48: cannot create implicit token for string literal in non-combined grammar: '<'
+    error(126): XMLParser.g4:45:52: cannot create implicit token for string literal in non-combined grammar: '/'
+    error(126): XMLParser.g4:45:61: cannot create implicit token for string literal in non-combined grammar: '>'
+    error(126): XMLParser.g4:46:16: cannot create implicit token for string literal in non-combined grammar: '<'
+    error(126): XMLParser.g4:46:36: cannot create implicit token for string literal in non-combined grammar: '/>'
+    error(126): XMLParser.g4:51:21: cannot create implicit token for string literal in non-combined grammar: '='

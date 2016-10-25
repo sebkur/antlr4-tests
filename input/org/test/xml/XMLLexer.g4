@@ -29,6 +29,10 @@
 /** XML lexer derived from ANTLR v4 ref guide book example */
 lexer grammar XMLLexer;
 
+@header {
+package org.test.xml;
+}
+
 // Default "mode": Everything OUTSIDE of a tag
 COMMENT     :   '<!--' .*? '-->' ;
 CDATA       :   '<![CDATA[' .*? ']]>' ;

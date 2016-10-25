@@ -28,6 +28,10 @@
 
 lexer grammar  HTMLLexer;
 
+@header {
+package com.test.html;
+}
+
 HTML_COMMENT
     : '<!--' .*? '-->'
     ;

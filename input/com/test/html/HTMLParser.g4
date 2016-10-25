@@ -28,7 +28,11 @@
 
 parser grammar HTMLParser;
 
-options { tokenVocab=HTMLLexer; }
+options { tokenVocab='com/test/html/HTMLLexer'; }
+
+@header {
+package com.test.html;
+}
 
 htmlDocument
     : (scriptlet | SEA_WS)* xml? (scriptlet | SEA_WS)* dtd? (scriptlet | SEA_WS)* htmlElements*

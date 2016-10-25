@@ -26,6 +26,10 @@ in the gradle forums a few times, but could not be resolved yet:
 * https://issues.gradle.org/browse/GRADLE-3345
 * https://discuss.gradle.org/t/antlr-4-behavior-change-between-gradle-2-4-and-2-7/11966/8
 
+There's also [a question on
+Stackoverflow](http://stackoverflow.com/questions/30204255/how-can-one-use-a-lexer-in-a-package-with-a-parser-in-a-different-package)
+on this.
+
 This repository contains two test grammars as well as a customized version
 of antlr4 that is able to build them.
 

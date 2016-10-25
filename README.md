@@ -21,7 +21,38 @@ Using the official runtime (this fails on purpose):
 
 `./run-snapshot.sh`
 
-## Output of `./run-4.5.sh`
+## Results
+
+`run-snapshot.sh` generates parsers for both grammars
+without problems.
+
+`> tree output-snapshot`
+
+    output-snapshot/
+    |-- com
+    |   `-- test
+    |       `-- html
+    |           |-- HTMLLexer.java
+    |           |-- HTMLLexer.tokens
+    |           |-- HTMLParserBaseListener.java
+    |           |-- HTMLParser.java
+    |           |-- HTMLParserListener.java
+    |           `-- HTMLParser.tokens
+    `-- org
+        `-- test
+            `-- xml
+                |-- XMLLexer.java
+                |-- XMLLexer.tokens
+                |-- XMLParserBaseListener.java
+                |-- XMLParser.java
+                |-- XMLParserListener.java
+                `-- XMLParser.tokens
+
+    6 directories, 12 files
+
+`run-4.5.sh` does not work because the `*.tokens` files cannot be resolved
+
+`> ./run-4.5.sh`:
 
     error(3):  cannot find tokens file ../output-4.5/org/test/xml/XMLLexer.tokens given for XMLParser
     warning(125): XMLParser.g4:40:16: implicit definition of token XMLDeclOpen in parser
@@ -43,3 +74,18 @@ Using the official runtime (this fails on purpose):
     error(126): XMLParser.g4:46:16: cannot create implicit token for string literal in non-combined grammar: '<'
     error(126): XMLParser.g4:46:36: cannot create implicit token for string literal in non-combined grammar: '/>'
     error(126): XMLParser.g4:51:21: cannot create implicit token for string literal in non-combined grammar: '='
+
+`> tree output-4.5`
+
+    output-4.5/
+    `-- com
+        `-- test
+            `-- html
+                |-- HTMLLexer.java
+                |-- HTMLLexer.tokens
+                |-- HTMLParserBaseListener.java
+                |-- HTMLParser.java
+                |-- HTMLParserListener.java
+                `-- HTMLParser.tokens
+
+    3 directories, 6 files

@@ -1,5 +1,31 @@
 # This is a test repository for antlr4
 
+This repository demonstrates how antlr4 grammars can reference
+a tokenVocab that contains a path instead of just a file name.
+
+The topic already
+[came up in 2007 on the mailing
+list](http://www.antlr3.org/pipermail/antlr-interest/2007-August/023196.html).
+
+The problem is that the following is currently not possible:
+
+* Work with at least two different grammars
+* Have separate lexer and parser files for each
+* Grammars reside inside arbitrary Java packages
+
+Ultimately the problem is that the referenced `tokenVocab` cannot be
+resolved when processing a grammar that does not reside in the default
+package. Using the `-lib` makes it possible to work around this problem
+for a single package, but this fails to work for multiple grammars in
+different packages because `-lib` can only be specified once.
+
+I have this problem in a gradle build. It has already been reported
+in the gradle forums a few times, but could not be resolved yet:
+
+* https://discuss.gradle.org/t/using-antlr-plugin-to-process-separate-lexer-and-parser-grammars/15150
+* https://issues.gradle.org/browse/GRADLE-3345
+* https://discuss.gradle.org/t/antlr-4-behavior-change-between-gradle-2-4-and-2-7/11966/8
+
 ## Files
 
 The `input` directory contains the XML and HTML grammars

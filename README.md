@@ -26,6 +26,9 @@ in the gradle forums a few times, but could not be resolved yet:
 * https://issues.gradle.org/browse/GRADLE-3345
 * https://discuss.gradle.org/t/antlr-4-behavior-change-between-gradle-2-4-and-2-7/11966/8
 
+This repository contains two test grammars as well as a customized version
+of antlr4 that is able to build them.
+
 ## Files
 
 The `input` directory contains the XML and HTML grammars
